@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:furniturestore/core/resources/colors_manger.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
   final Color backgroundColor;
   final double borderRadius;
   final VoidCallback onPressed;
+  
 
   const CustomButton({
     super.key,
@@ -12,6 +14,7 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     this.backgroundColor = Colors.blue,
     this.borderRadius = 4,
+   
   });
 
   @override
@@ -27,7 +30,7 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(title),
+        child: Text(title,style: TextStyle(color: ColorsManager.conte),),
       ),
     );
   }

@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:furniturestore/core/routes/class%20rout.dart';
 import 'package:furniturestore/pages/onboarding.dart';
 
-void main (){
-  runApp( 
+void main() {
+  runApp(
     ScreenUtilInit(
       designSize: Size(375, 812), // أبعاد التصميم من Figma
       minTextAdapt: true,
@@ -12,8 +12,8 @@ void main (){
       builder: (context, child) => const MyApp(),
     ),
   );
-
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
- initialRoute: '/',
+      initialRoute: '/',
       routes: AppRoutes.routes,
-      
+
       // home:  Onboarding(),
     );
   }
