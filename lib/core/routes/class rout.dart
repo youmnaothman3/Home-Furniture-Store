@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniturestore/pages/cartpage.dart';
 import 'package:furniturestore/pages/homepage.dart';
 
 import 'package:furniturestore/pages/login.dart';
@@ -11,5 +12,7 @@ class AppRoutes {
     '/login': (context) => const Login(),
     '/signup': (context) => const Signup(),
     '/homepage':(context)=>const HomePage(),
+    '/cart': (context) => const CartPage(),
+
   };
 }

@@ -82,7 +82,7 @@ class _SignupState extends State<Signup> {
                     suffixIcon: Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: SvgPicture.asset(
-                        'assets/icons/baseline-keyboard_arrow_down-24px.svg', // عدلي حسب اسم الأيقونة يلي عندك
+                        IconAssets.iconarrow, // عدلي حسب اسم الأيقونة يلي عندك
                         width: 24,
                         height: 24,
                         fit: BoxFit.scaleDown,
@@ -108,7 +108,7 @@ class _SignupState extends State<Signup> {
                         suffixIcon: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: SvgPicture.asset(
-                            'assets/icons/baseline-keyboard_arrow_down-24px.svg',
+                            IconAssets.iconarrow,
                             width: 24,
                             height: 24,
                             fit: BoxFit.scaleDown,
@@ -116,7 +116,7 @@ class _SignupState extends State<Signup> {
                         ),
                         border: OutlineInputBorder(),
                         errorBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.red),
+                          borderSide: BorderSide(color:ColorsManager.borderSidered),
                         ),
                         labelText: 'Email',
                       ),
@@ -134,7 +134,7 @@ class _SignupState extends State<Signup> {
                         suffixIcon: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: SvgPicture.asset(
-                            'assets/icons/eye 1.svg',
+                            IconAssets.iconeye,
                             width: 24,
                             height: 24,
                             fit: BoxFit.scaleDown,
@@ -187,7 +187,7 @@ class _SignupState extends State<Signup> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text('Invalid Infromation'),
-                              backgroundColor: Colors.red,
+                              backgroundColor: ColorsManager.borderSidered
                             ),
                           );
                         }

@@ -58,7 +58,7 @@ int selectedIndex = 0;
 @override
 Widget build(BuildContext context) {
 return Scaffold(
-backgroundColor: Colors.white,
+
 
 
   appBar: AppBar(
@@ -124,7 +124,7 @@ backgroundColor: Colors.white,
       ),
       BottomNavigationBarItem(
         icon: CustomBottomNavIcon(
-          assetPath: IconAssets.Group,
+          assetPath: IconAssets.group,
           isSelected: selectedIndex == 3,
         ),
         label: 'Cart',

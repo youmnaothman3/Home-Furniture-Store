@@ -14,7 +14,8 @@ class IconAssets {
   static const String clarity_home = "assets/icons/clarity_home-solid.svg";
   static const String marker = "assets/icons/marker 1.svg";
   static const String bell = "assets/icons/bell.svg";
-  static const String Group = "assets/icons/Group (1).svg";
+  static const String group = "assets/icons/Group (1).svg";
   static const String BackContainer = "assets/icons/Back Container.svg";
+  
  
 }
