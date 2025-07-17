@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:furniturestore/core/resources/assets_manager.dart';
 import 'package:furniturestore/core/resources/colors_manger.dart';
 import 'package:furniturestore/core/resources/string_manger.dart';
+import 'package:furniturestore/pages/homepage.dart';
 import 'package:furniturestore/pages/sinup.dart';
 import 'package:furniturestore/widgets/auth_form_container.dart';
 import 'package:furniturestore/widgets/custom_button.dart';
@@ -157,7 +158,7 @@ class _LoginState extends State<Login> {
               if (formKey.currentState!.validate()) {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const Signup()),
+                  MaterialPageRoute(builder: (context) => const HomePage()),
                 );
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(

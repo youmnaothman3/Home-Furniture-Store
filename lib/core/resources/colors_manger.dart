@@ -5,5 +5,6 @@ class ColorsManager {
 static const Color shadow=Color(0xFF8A959E33);
 static const Color conte=Color(0xFFffffff);
 static const Color borderSidered=Colors.red;
+static const Color titleColor=Colors.orange;
 
 }

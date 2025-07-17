@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:furniturestore/core/resources/colors_manger.dart';
 import 'package:furniturestore/model/product_model.dart';
 import 'package:furniturestore/widgets/cart_item.dart';
+import 'package:furniturestore/widgets/custom_button.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
@@ -13,9 +14,21 @@ class CartPage extends StatefulWidget {
 
 class _CartPageState extends State<CartPage> {
   List<ProductModel> cartItems = [
-    ProductModel(name: "Minimal Stand", image: "assets/images/lamp.jpg", price: 25.0),
-    ProductModel(name: "Minimal Stand", image: "assets/images/lamp.jpg", price: 25.0),
-    ProductModel(name: "Minimal Stand", image: "assets/images/lamp.jpg", price: 25.0),
+    ProductModel(
+      name: "Minimal Stand",
+      image: "assets/images/lamp.jpg",
+      price: 25.0,
+    ),
+    ProductModel(
+      name: "Minimal Stand",
+      image: "assets/images/lamp.jpg",
+      price: 25.0,
+    ),
+    ProductModel(
+      name: "Minimal Stand",
+      image: "assets/images/lamp.jpg",
+      price: 25.0,
+    ),
   ];
 
   Map<ProductModel, int> itemQuantities = {};
@@ -118,23 +131,23 @@ class _CartPageState extends State<CartPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Total: \$${total.toStringAsFixed(2)}",
-                    style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: ColorsManager.primarycolor)),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: ColorsManager.primarycolor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+                Text(
+                  "Total: \$${total.toStringAsFixed(2)}",
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: ColorsManager.primarycolor,
                   ),
-                  onPressed: () {},
-                  child: const Text("Check out"),
                 ),
               ],
-            )
+            ),
+            CustomButton(
+              title: 'Cheek out',
+              backgroundColor: ColorsManager.primarycolor,
+              onPressed: () {
+                Navigator.pushNamed(context, '/checkout');
+              },
+            ),
           ],
         ),
       ),

@@ -54,6 +54,21 @@ State<HomePage> createState() => _HomePageState();
 
 class _HomePageState extends State<HomePage> {
 int selectedIndex = 0;
+void onNavTap(int index){
+  setState(() {
+      selectedIndex = index;
+    });
+
+    // التنقل بين الصفحات حسب الإندكس
+      if (index == 1) {
+      Navigator.pushNamed(context, '/favorites');
+    }else if (index == 2) {
+      Navigator.pushNamed(context,'/notificaton');
+    }
+     else if (index == 3) {
+      Navigator.pushNamed(context,'/profile');
+    }
+}
 
 @override
 Widget build(BuildContext context) {
@@ -66,7 +81,7 @@ return Scaffold(
     backgroundColor: Colors.transparent,
     title: Center(
       child: Image.asset(
-        AssetsManager.Content,
+        AssetsManager.content,
         height: 40,
       ),
     ),
@@ -92,11 +107,12 @@ return Scaffold(
 
   bottomNavigationBar: BottomNavigationBar(
     currentIndex: selectedIndex,
-    onTap: (index) {
-      setState(() {
-        selectedIndex = index;
-      });
-    },
+    onTap: onNavTap,
+    // (index) {
+    //   setState(() {
+    //     selectedIndex = index;
+    //   });
+    // },
     type: BottomNavigationBarType.fixed,
     showSelectedLabels: false,
     showUnselectedLabels: false,

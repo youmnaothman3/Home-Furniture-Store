@@ -57,7 +57,7 @@ class _FavoritepageState extends State<FavoritesPage> {
         // أنت بالفعل بصفحة المفضلة
         break;
       case 2:
-        Navigator.pushNamed(context, '/cart');
+        Navigator.pushNamed(context, '/notificaton');
         break;
       case 3:
         Navigator.pushNamed(context, '/profile');

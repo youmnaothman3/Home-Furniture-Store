@@ -239,7 +239,9 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                         child: CustomButton(
                           title: StringManager.Addtocart,
                           backgroundColor: ColorsManager.primarycolor,
-                          onPressed: () {},
+                          onPressed: () {
+                             Navigator.pushNamed(context, '/cart');
+                          },
                         ),
                       ),
                     ],
