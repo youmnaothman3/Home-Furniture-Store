@@ -5,11 +5,12 @@ import 'package:furniturestore/core/resources/colors_manger.dart';
 import 'package:furniturestore/core/resources/string_manger.dart';
 import 'package:furniturestore/model/product_model.dart';
 import 'package:furniturestore/pages/favorites.dart';
+
+import 'package:furniturestore/pages/review.dart.dart';
 import 'package:furniturestore/widgets/custom_button.dart';
 
-
 class ProductDetailsPage extends StatefulWidget {
-  final ProductModel product;
+  final ProductModel product; //!هيك كل التفاصيل بترتبط بهالمنتج فقط.
 
   const ProductDetailsPage({super.key, required this.product});
 
@@ -105,7 +106,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   icon: const Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () => Navigator.pop(context),
                 ),
-              ),// ✅ مستطيلات صغيرة (تحت الصورة - مكان الرجل)
+              ), // ✅ مستطيلات صغيرة (تحت الصورة - مكان الرجل)
               Positioned(
                 bottom: 10,
                 right: 30,
@@ -117,13 +118,15 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       height: 4,
                       margin: const EdgeInsets.symmetric(horizontal: 2),
                       decoration: BoxDecoration(
-                        color: index == selectedColorIndex ? ColorsManager.primarycolor : Colors.grey.shade300,
+                        color: index == selectedColorIndex
+                            ? ColorsManager.primarycolor
+                            : Colors.grey.shade300,
                         borderRadius: BorderRadius.circular(4),
                       ),
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
 
@@ -137,7 +140,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   // اسم المنتج
                   Text(
                     widget.product.name,
-                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
 
                   const SizedBox(height: 8),
@@ -159,7 +165,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           border: Border.all(color: Colors.grey.shade300),
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
                         child: Row(
                           children: [
                             GestureDetector(
@@ -171,7 +180,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                               child: const Icon(Icons.remove, size: 18),
                             ),
                             const SizedBox(width: 8),
-                            Text('$quantity', style: const TextStyle(fontSize: 16)),
+                            Text(
+                              '$quantity',
+                              style: const TextStyle(fontSize: 16),
+                            ),
                             const SizedBox(width: 8),
                             GestureDetector(
                               onTap: () {
@@ -191,10 +203,27 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
 
                   // ✅ نجمة + تقييم
                   Row(
-                    children: const [
-                      Icon(Icons.star, color: Colors.orange, size: 20),
-                      SizedBox(width: 8),
-                      Text(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          print('product name: ${widget.product.name}');
+
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                 builder: (context) => ReviewPage(product: widget.product)
+                              //!لما نكبس عالنجمةرحنا لصفحة ReviewPageوأرسلنا معها معلومات المنتج يلي كنا فاتحين عليه
+                            ),
+                          ); // تأكد من تعريف هذا الراوت
+                        },
+                        child: const Icon(
+                          Icons.star,
+                          color: Colors.orange,
+                          size: 20,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      const Text(
                         '4.5 (50 reviews)',
                         style: TextStyle(color: Colors.grey),
                       ),
@@ -208,7 +237,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     style: TextStyle(fontSize: 14, color: Colors.grey),
                   ),
 
-                  const Spacer(),// ✅ زر + أيقونة marker (SVG)
+                  const Spacer(), // ✅ زر + أيقونة marker (SVG)
                   Row(
                     children: [
                       GestureDetector(
@@ -240,12 +269,12 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           title: StringManager.Addtocart,
                           backgroundColor: ColorsManager.primarycolor,
                           onPressed: () {
-                             Navigator.pushNamed(context, '/cart');
+                            Navigator.pushNamed(context, '/cart');
                           },
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

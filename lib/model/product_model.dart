@@ -10,4 +10,6 @@ class ProductModel {
     required this.price,
     this.boolshopping = false,
   });
+
+  
 }

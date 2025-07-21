@@ -9,6 +9,8 @@ import 'package:furniturestore/pages/myorders.dart';
 import 'package:furniturestore/pages/notificaton.dart';
 import 'package:furniturestore/pages/onboarding.dart';
 import 'package:furniturestore/pages/profilepage.dart';
+import 'package:furniturestore/pages/writeareview.dart';
+
 import 'package:furniturestore/pages/sinup.dart';
 import 'package:furniturestore/pages/success.dart';
 
@@ -25,7 +27,8 @@ class AppRoutes {
     '/checkout':(context)=>const CheckOut(),
     '/success':(context)=>const SuccessPage(),
     '/orders':(context)=>const MyOrders(),
-
+// '/rating': (context) =>  ReviewPage(),
+'/review':(context)=>const MyReview(),
 
   };
 }
