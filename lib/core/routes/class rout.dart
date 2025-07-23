@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:furniturestore/pages/Shipping%20address.dart';
+import 'package:furniturestore/pages/addShippingaddress.dart';
 import 'package:furniturestore/pages/cartpage.dart';
 import 'package:furniturestore/pages/cheekout.dart';
 import 'package:furniturestore/pages/favorites.dart';
@@ -8,7 +10,9 @@ import 'package:furniturestore/pages/login.dart';
 import 'package:furniturestore/pages/myorders.dart';
 import 'package:furniturestore/pages/notificaton.dart';
 import 'package:furniturestore/pages/onboarding.dart';
+import 'package:furniturestore/pages/payment%20method.dart';
 import 'package:furniturestore/pages/profilepage.dart';
+import 'package:furniturestore/pages/settings.dart';
 import 'package:furniturestore/pages/writeareview.dart';
 
 import 'package:furniturestore/pages/sinup.dart';
@@ -29,6 +33,10 @@ class AppRoutes {
     '/orders':(context)=>const MyOrders(),
 // '/rating': (context) =>  ReviewPage(),
 '/review':(context)=>const MyReview(),
+'/shipping':(context)=> ShippingAddressPage(),
+'/payment':(context)=> PaymentMethodPage(),
+'/settings':(context)=> SettingsPage(),
+'/add-shipping':(context)=> AddShippingAddressPage(),
 
   };
 }
