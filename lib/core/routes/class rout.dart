@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniturestore/pages/Shipping%20address.dart';
 import 'package:furniturestore/pages/addShippingaddress.dart';
+import 'package:furniturestore/pages/add_payment_page.dart';
 import 'package:furniturestore/pages/cartpage.dart';
 import 'package:furniturestore/pages/cheekout.dart';
 import 'package:furniturestore/pages/favorites.dart';
@@ -37,6 +38,6 @@ class AppRoutes {
 '/payment':(context)=> PaymentMethodPage(),
 '/settings':(context)=> SettingsPage(),
 '/add-shipping':(context)=> AddShippingAddressPage(),
-
+'/Addpaymentpage':(context)=> AddPaymentPage(),
   };
 }

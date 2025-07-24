@@ -3,6 +3,7 @@ class StringManager {
   static const String HelloWELCOME ="           Hello!\n     WELCOME BACK"; 
   static const String WELCOME="WELCOME";   
   static const String Addtocart="Add to cart"    ;    
-  static const String writeareview="Write a review"  ;         
+  static const String writeareview="Write a review"  ;  
+  static const String saveaddress="Save address"  ;        
 
 }
